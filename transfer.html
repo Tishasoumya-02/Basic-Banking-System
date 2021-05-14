@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   
+    <title>Transfer Money</title>
+</head>
+<body>
+    <form method="POST" action="/transfer" style="border: 7px;padding: 7%;">
+        <div class="form-row">
+          <div class="col-md-auto">
+            <label for="textd"  class="label">Depositor's Name</label>
+            <input type="text" name="dname" class="form-control" placeholder="Your Name">
+          </div>
+          <div class="col-md-auto">
+            <label for="numberd" class="label">Customer-ID</label>
+            <input type="number" name="dcid" class="form-control" placeholder="Enter your Customer ID">
+          </div>
+          </div>
+          <div class="form-row" style="margin-top:2%;">
+          <div class="col-md-auto">
+            <label for="textr"   class="label">Recepient's Name</label>
+            <input type="text"  name="rname" class="form-control" placeholder="Enter Name">
+          </div>
+          <div class="col-md-auto">
+            <label for="numberr" class="label">Customer-ID</label>
+            <input type="number" name="rcid" class="form-control" placeholder="Enter Customer ID">
+          </div>
+        </div>
+        
+        <div class="form-group"  style="margin-top:2%;">
+            <div class="col-md-auto">
+            <label for="inputamount">Amount</label>
+            <input type="number" name="depositmoney"class="form-control" id="inputamount" placeholder="Enter money to deposit" min="0.00" max="1000000.00" step="0.01">
+            
+        
+        </div>
+        </div>
+        <button type="submit"  class="btn btn-primary">Transfer</button>
+</form>
+</body>
+</html>

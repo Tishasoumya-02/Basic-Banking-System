@@ -1,0 +1,26 @@
+body
+{
+    /* background-color:#eca3f5; */
+    background: linear-gradient(to top, rgba(13, 84, 151, 0.863), rgb(54, 51, 51));
+    /* background-image: url(/Images/Bank1.png);
+    background-size: 20%;
+    background-size: 120px;
+    background-repeat: space; */
+    
+}
+
+.cards
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-basis: 50%;
+    margin-top: 2%; 
+}
+.card
+{
+margin:5%;
+background-image: linear-gradient( 135deg, #fdfafa 10%, #81caf5 100%);
+padding: 1%;
+}

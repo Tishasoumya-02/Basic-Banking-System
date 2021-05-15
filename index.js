@@ -4,7 +4,7 @@ const {Pool}=require('pg');
 const ejs=require('ejs');
 
 
-
+const  port=process.env.PORT || 3000;
 
 require('dotenv').config();
 // set production variable. This will be called when deployed to a live host
@@ -87,7 +87,7 @@ app.get("/transfer",function(req,res)
  
 
 
-app.listen(3000,function()
+app.listen(port,function()
 {
-    console.log("Server is running on port 3000 ");
+    console.log(`Server is running on port ${port}`);
 });

@@ -4,18 +4,17 @@ const {Pool}=require('pg');
 const ejs=require('ejs');
 
 
-const pool=new Pool(
-    {
-    user: 'postgres',
-    host: 'localhost',
-    database: 'banking_db',
-    password: 'qwerty',
-    port: 5432,
-    }
-);
+
 
 require('dotenv').config();
+// set production variable. This will be called when deployed to a live host
+const isProduction = process.env.NODE_ENV === 'production';
+const connectionString = `postgresql://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_DATABASE}`;
 
+const pool = new pg.Pool({
+    connectionString: isProduction ? process.env.DATABASE_URL : connectionString,
+    ssl: isProduction,
+  });
 const app=express();
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));

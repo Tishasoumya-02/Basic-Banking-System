@@ -337,7 +337,7 @@ ALTER TABLE ONLY public.depositor
 ALTER TABLE ONLY public.receiver
     ADD CONSTRAINT receiver_customer_id_fkey FOREIGN KEY (customer_id) REFERENCES public.customers(customer_id);
 
-
+set timezone='Asia/Calcutta'
 -- Completed on 2021-05-15 08:37:27
 
 --
